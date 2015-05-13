@@ -63,4 +63,4 @@ mod 'ovirt', :git => 'https://github.com/treydock/puppet-ovirt', :ref => '1.x'
 
 # UMD HEPCMS modules
 mod 'profile', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_profiles'
-mod 'roles', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_roles'
+mod 'role', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_roles'
