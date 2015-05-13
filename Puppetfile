@@ -28,6 +28,7 @@ mod 'theforeman/puppet', '3.0.0'
 mod 'theforeman/tftp', '1.5.1'
 
 # community modules from forge
+mod 'croddy/make', '0.0.5'
 mod 'ghoneycutt/common', '1.2.1'
 mod 'ghoneycutt/dnsclient', '3.3.0'
 mod 'ghoneycutt/facter', '1.3.2'
