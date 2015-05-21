@@ -19,10 +19,11 @@ mod 'puppetlabs/stdlib', '4.6.0'
 mod 'puppetlabs/xinetd', '1.5.0'
 
 # theforeman modules
-mod 'theforeman/concat_native', '1.4.0'
+#mod 'theforeman/concat_native', '1.4.0'
 mod 'theforeman/dhcp', '1.6.0'
 mod 'theforeman/dns', '2.0.1'
-mod 'theforeman/foreman', '3.0.2'
+#mod 'theforeman/foreman', '3.0.2'
+mod 'theforeman/foreman', :git => 'https://github.com/theforeman/puppet-foreman', :commit => '3032c86'
 mod 'theforeman/foreman_proxy', '2.2.2'
 mod 'theforeman/puppet', '3.0.0'
 mod 'theforeman/tftp', '1.5.1'
