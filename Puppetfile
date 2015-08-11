@@ -56,6 +56,7 @@ mod 'stahnma/epel', '1.0.2'
 #mod 'stahnma/puppetlabs_yum', '0.1.4'
 mod 'puppetlabs_yum', :git => 'https://github.com/treydock/puppet-module-puppetlabs_yum', :ref => 'master'
 mod 'treydock/yum_cron', '1.2.0'
+mod 'treydock/gpg_key'
 mod 'zack/exports', '0.0.4'
 mod 'zack/r10k', '2.7.4'
 
