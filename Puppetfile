@@ -18,6 +18,7 @@ mod 'puppetlabs/ruby', '0.4.0'
 mod 'puppetlabs/stdlib', '4.6.0'
 mod 'puppetlabs/xinetd', '1.5.0'
 mod 'puppetlabs/denyhosts', '0.1.0'
+mod 'puppetlabs/jfryman-selinux', '0.2.5'
 
 # theforeman modules
 #mod 'theforeman/concat_native', '1.4.0'
