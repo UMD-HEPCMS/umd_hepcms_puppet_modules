@@ -60,7 +60,7 @@ mod 'stahnma/epel', '1.0.2'
 mod 'puppetlabs_yum', :git => 'https://github.com/treydock/puppet-module-puppetlabs_yum', :ref => 'master'
 mod 'treydock/yum_cron', '1.2.0'
 mod 'treydock/gpg_key'
-mod 'yguenane/authconfig' '0.6.0'
+mod 'yguenane/authconfig', '0.6.0'
 mod 'zack/exports', '0.0.4'
 mod 'zack/r10k', '2.7.4'
 
