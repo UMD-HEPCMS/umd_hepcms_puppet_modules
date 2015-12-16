@@ -10,7 +10,8 @@
 node default {
 }
 node 'foreman-vmtest2'{
-class { 'yum_cron':
-  yum_autoupdate_ensure => 'absent'
-}
+ file { '/test':
+    ensure => 'symlink',
+    target => '/data/hadoop',
+  }
 }
