@@ -9,11 +9,29 @@ node default {
 }
 
 # example implementation:
+# note that .privnet not needed, but .umd.edu might be for public IP nodes
+#node 'FQDN-As-Foreman-KnowsIt'{
+#  file { '/test':
+#     ensure => 'symlink',
+#     target => '/data/hadoop',
+#   }
+#}
 node 'hepcms-vmtest'{
-  file { '/test':
-     ensure => 'symlink',
-     target => '/data/hadoop',
-   }
+include ::osg
+include ::profile::osg::hadoop_client
+
+# hadoop mountpoint
+file { "/mnt/hadoop": ensure => directory }
+mount { "mount_hadoop":
+         name    => "/mnt/hadoop",
+	device  => "hadoop-fuse-dfs",
+	fstype  => "fuse",
+	ensure  => mounted,
+	options => "server=hepcms-namenode.privnet,port=9000,rdbuffer=131072,allow_other",
+	atboot  => true,
+	remounts => false,
+	require => [ File["/mnt/hadoop"] ],
+}
 }
 node 'foreman-vmtest2'{
 include ::osg
