@@ -17,7 +17,8 @@ node 'hepcms-vmtest'{
 }
 node 'foreman-vmtest2'{
 include ::osg
-include ::profile::osg:hadoop_client
+include ::profile::osg::hadoop_client
+
 # hadoop mountpoint
 file { "/mnt/hadoop": ensure => directory }
 mount { "mount_hadoop":
