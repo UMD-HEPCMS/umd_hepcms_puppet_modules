@@ -6,6 +6,7 @@
 # default node MUST exist (do all the rest of the default type things in base.pp, note that 
 # hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
 node default {
+hiera_include('classes')
 }
 
 # example implementation:
@@ -19,34 +20,34 @@ node default {
 node 'hepcms-vmtest'{
 include ::osg
 include ::profile::osg::hadoop_client
-
-# hadoop mountpoint
-file { "/mnt/hadoop": ensure => directory }
-mount { "mount_hadoop":
-         name    => "/mnt/hadoop",
-	device  => "hadoop-fuse-dfs",
-	fstype  => "fuse",
-	ensure  => mounted,
-	options => "server=hepcms-namenode.privnet,port=9000,rdbuffer=131072,allow_other",
-	atboot  => true,
-	remounts => false,
-	require => [ File["/mnt/hadoop"] ],
-}
+# included in ::profile::osg::hadoop_client above now!
+# # hadoop mountpoint
+# file { "/mnt/hadoop": ensure => directory }
+# mount { "mount_hadoop":
+#          name    => "/mnt/hadoop",
+# 	device  => "hadoop-fuse-dfs",
+# 	fstype  => "fuse",
+# 	ensure  => mounted,
+# 	options => "server=hepcms-namenode.privnet,port=9000,rdbuffer=131072,allow_other",
+# 	atboot  => true,
+# 	remounts => false,
+# 	require => [ File["/mnt/hadoop"] ],
+# }
 }
 node 'foreman-vmtest2'{
 include ::osg
 include ::profile::osg::hadoop_client
-
-# hadoop mountpoint
-file { "/mnt/hadoop": ensure => directory }
-mount { "mount_hadoop":
-         name    => "/mnt/hadoop",
-	device  => "hadoop-fuse-dfs",
-	fstype  => "fuse",
-	ensure  => mounted,
-	options => "server=hepcms-namenode.privnet,port=9000,rdbuffer=131072,allow_other",
-	atboot  => true,
-	remounts => false,
-	require => [ File["/mnt/hadoop"] ],
-}
+# 
+# # hadoop mountpoint
+# file { "/mnt/hadoop": ensure => directory }
+# mount { "mount_hadoop":
+#          name    => "/mnt/hadoop",
+# 	device  => "hadoop-fuse-dfs",
+# 	fstype  => "fuse",
+# 	ensure  => mounted,
+# 	options => "server=hepcms-namenode.privnet,port=9000,rdbuffer=131072,allow_other",
+# 	atboot  => true,
+# 	remounts => false,
+# 	require => [ File["/mnt/hadoop"] ],
+# }
 }
