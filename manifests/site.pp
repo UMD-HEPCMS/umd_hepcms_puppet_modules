@@ -7,3 +7,5 @@
 #  yum_autoupdate_ensure => 'absent'
 #}
 #}
+node default {
+}
