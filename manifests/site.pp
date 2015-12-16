@@ -1,17 +1,17 @@
 # site.pp
 
-#hiera_include('classes')
-#Use to test puppet changes on a single node (note that the other nodes complain there's no default :(
-#node 'hepcms-in1.umd.edu' {
-#class { 'yum_cron':
-#  yum_autoupdate_ensure => 'absent'
-#}
-#}
+#hiera_include('classes') (didn't work, don't know why)
+
+#Use to test puppet changes on a single node by fqdn (use the fdqn known about in hepcms-foreman web page)
+# default node MUST exist (do all the rest of the default type things in base.pp, note that 
+# hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
 node default {
 }
-node 'foreman-vmtest2'{
- file { '/test':
-    ensure => 'symlink',
-    target => '/data/hadoop',
-  }
-}
+
+# example implementation:
+# node 'hepcms-vmtest'{
+#  file { '/test':
+#     ensure => 'symlink',
+#     target => '/data/hadoop',
+#   }
+# }
