@@ -8,7 +8,7 @@
 node default {
 hiera_include('classes')
 }
-
+### you MUST put hiera_include('classes') in your individual nodes if you want it to use hiera classes
 # example implementation:
 # note that .privnet not needed, but .umd.edu might be for public IP nodes
 #node 'FQDN-As-Foreman-KnowsIt'{
@@ -18,8 +18,9 @@ hiera_include('classes')
 #   }
 #}
 node 'hepcms-vmtest'{
-include ::osg
-include ::profile::osg::hadoop_client
+hiera_include('classes')
+#include ::osg
+#include ::profile::osg::hadoop_client
 # included in ::profile::osg::hadoop_client above now!
 # # hadoop mountpoint
 # file { "/mnt/hadoop": ensure => directory }
