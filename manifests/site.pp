@@ -9,9 +9,9 @@ node default {
 }
 
 # example implementation:
-# node 'hepcms-vmtest'{
-#  file { '/test':
-#     ensure => 'symlink',
-#     target => '/data/hadoop',
-#   }
-# }
+node 'hepcms-vmtest'{
+  file { '/test':
+     ensure => 'symlink',
+     target => '/data/hadoop',
+   }
+}
