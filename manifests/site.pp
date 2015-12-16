@@ -9,7 +9,7 @@
 #}
 node default {
 }
-node 'foreman-vmtest2"{
+node 'foreman-vmtest2'{
 class { 'yum_cron':
   yum_autoupdate_ensure => 'absent'
 }
