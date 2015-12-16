@@ -17,10 +17,7 @@ node 'hepcms-vmtest'{
 }
 node 'foreman-vmtest2'{
 include ::osg
-package { 'osg-se-hadoop-client':
-    ensure  => 'installed',
-    require => Yumrepo['osg'], # If the package comes from OSG repos, then may also want to include OSG class 
-}
+include ::profile::osg:hadoop_client
 # hadoop mountpoint
 file { "/mnt/hadoop": ensure => directory }
 mount { "mount_hadoop":
