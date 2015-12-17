@@ -26,4 +26,5 @@ include ::profile::osg::hadoop_client
 }
 node 'hepcms-in1'{
 # include ::profile::osg::hadoop_client
+hiera_include('classes')
 }
