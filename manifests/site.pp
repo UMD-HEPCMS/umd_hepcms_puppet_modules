@@ -18,7 +18,7 @@ node default {
 #   }
 #}
 node 'hepcms-vmtest'{
-hiera_include('classes')
+#hiera_include('classes')
 #include ::osg
 #include ::profile::osg::hadoop_client
 # included in ::profile::osg::hadoop_client above now!
