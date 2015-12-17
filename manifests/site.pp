@@ -7,6 +7,7 @@
 # hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
 #hiera_include('classes')
 node default {
+hiera_include('classes')
 }
 ### you MUST put hiera_include('classes') in your individual nodes if you want it to use hiera classes
 # example implementation:
@@ -25,5 +26,4 @@ include ::profile::osg::hadoop_client
 }
 node 'hepcms-in1'{
 # include ::profile::osg::hadoop_client
-hiera_include('classes')
 }
