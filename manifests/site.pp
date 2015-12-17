@@ -6,7 +6,7 @@
 # default node MUST exist (do all the rest of the default type things in base.pp, note that 
 # hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
 # need this classes line in every node to be able to use classes in hiera
-# hiera_include('classes')
+# hiera_include('classes',[])
 node default {
 hiera_include('classes')
 }
@@ -27,5 +27,5 @@ include ::profile::osg::hadoop_client
 }
 node 'hepcms-in1'{
 # include ::profile::osg::hadoop_client
-hiera_include('classes')
+hiera_include('classes',[])
 }
