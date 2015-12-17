@@ -23,6 +23,7 @@ node 'hepcms-vmtest'{
 node 'foreman-vmtest2'{
 include ::profile::osg::hadoop_client
 }
-# node 'hepcms-in2'{
+node 'hepcms-in1'{
 # include ::profile::osg::hadoop_client
-# }
+hiera_include('classes')
+}
