@@ -5,7 +5,8 @@
 #Use to test puppet changes on a single node by fqdn (use the fdqn known about in hepcms-foreman web page)
 # default node MUST exist (do all the rest of the default type things in base.pp, note that 
 # hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
-#hiera_include('classes')
+# need this classes line in every node to be able to use classes in hiera
+# hiera_include('classes')
 node default {
 hiera_include('classes')
 }
