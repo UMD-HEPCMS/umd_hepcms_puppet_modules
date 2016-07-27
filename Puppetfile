@@ -63,6 +63,7 @@ mod 'treydock/gpg_key'
 mod 'yguenane/authconfig', '0.6.0'
 mod 'zack/exports', '0.0.4'
 mod 'zack/r10k', '2.7.4'
+mod 'thias/tuned', '1.0.3'
 
 # git based modules (not yet in forge)
 mod 'cron', :git => 'https://github.com/treydock/puppet-cron'
