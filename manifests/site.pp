@@ -25,6 +25,8 @@ node 'hepcms-vmtest' inherits default{
 node 'foreman-vmtest2' inherits default{
 # include ::profile::osg::hadoop_client
 }
+node 'r510-0-4' inherits default{
+}
 # node 'hepcms-in1' inherits default{
 # # include ::profile::osg::hadoop_client
 # hiera_include('classes',[])
