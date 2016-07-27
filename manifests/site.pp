@@ -26,6 +26,10 @@ node 'foreman-vmtest2' inherits default{
 # include ::profile::osg::hadoop_client
 }
 node 'r510-0-4' inherits default{
+  class {'::tuned':
+    profile => 'UMD-T3',
+    source => '/data/site_conf/tune-profiles',
+  }
 }
 # node 'hepcms-in1' inherits default{
 # # include ::profile::osg::hadoop_client
