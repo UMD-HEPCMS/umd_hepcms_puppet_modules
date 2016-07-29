@@ -28,7 +28,7 @@ node 'foreman-vmtest2' inherits default{
 node 'r510-0-4' inherits default{
   class {'::tuned':
     profile => 'UMD-T3',
-    source => '/data/site_conf/tune-profiles/UMD-T3',
+    source => 'file:///data/site_conf/tune-profiles/UMD-T3/',
   }
 }
 # node 'hepcms-in1' inherits default{
