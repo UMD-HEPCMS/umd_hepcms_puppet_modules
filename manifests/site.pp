@@ -3,7 +3,7 @@
 #hiera_include('classes') (didn't work, don't know why)
 
 #Use to test puppet changes on a single node by fqdn (use the fdqn known about in hepcms-foreman web page)
-# default node MUST exist (do all the rest of the default type things in base.pp, note that 
+# default node MUST exist (do all the rest of the default type things in base.pp, note that
 # hepcms-hn and hepcms-foreman are NOT part of base.pp, and that's ok)
 # need this classes line in every node to be able to use classes in hiera
 # hiera_include('classes',[]) (not sure if ,[] is needed, never tested, works without it right now 18 Dec 2015 MBT)
@@ -28,7 +28,7 @@ node 'foreman-vmtest2' inherits default{
 node 'r510-0-4' inherits default{
   class {'::tuned':
     profile => 'UMD-T3',
-    profile_path => '/data/site_conf/tune-profiles',
+    source => '/data/site_conf/tune-profiles',
   }
 }
 # node 'hepcms-in1' inherits default{
