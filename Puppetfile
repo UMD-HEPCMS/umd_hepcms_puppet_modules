@@ -73,6 +73,7 @@ mod 'omsa', :git => 'https://github.com/treydock/puppet-module-omsa'
 mod 'osg', :git => 'https://github.com/treydock/puppet-osg'
 mod 'ovirt', :git => 'https://github.com/treydock/puppet-ovirt', :ref => '1.x'
 mod 'clustershell', :git => 'https://github.com/treydock/puppet-clustershell'
+mod 'datanode', :git => 'https://github.com/mnudelli/HEP-datanode'
 
 # UMD HEPCMS modules
 mod 'profile', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_profiles'
