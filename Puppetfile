@@ -75,6 +75,9 @@ mod 'ovirt', :git => 'https://github.com/treydock/puppet-ovirt', :ref => '1.x'
 mod 'clustershell', :git => 'https://github.com/treydock/puppet-clustershell'
 mod 'datanode', :git => 'https://github.com/mnudelli/HEP-datanode'
 
+# git test module
+mod 'arman-puppettest', :git => 'https://github.com/Rman887/arman-puppettest'
+
 # UMD HEPCMS modules
 mod 'profile', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_profiles'
 mod 'role', :git => 'https://github.com/UMD-HEPCMS/umd_hepcms_puppet_roles'
