@@ -76,7 +76,7 @@ mod 'clustershell', :git => 'https://github.com/treydock/puppet-clustershell'
 
 # mnudelli HEP customized modules..
 mod 'datanode', :git => 'https://github.com/mnudelli/HEP-datanode'
-mod 'utilities', :git => 'https://github.com/mnudelli/HEP-utilities'
+mod 'hep_utilities', :git => 'https://github.com/mnudelli/HEP-utilities'
 # git test module
 #mod 'arman-puppettest', :git => 'https://github.com/Rman887/arman-puppettest'
 
