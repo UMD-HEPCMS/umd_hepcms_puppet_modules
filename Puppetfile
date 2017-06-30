@@ -66,13 +66,13 @@ mod 'zack/r10k', '2.7.4'
 mod 'thias/tuned', '1.0.3'
 
 # git based modules (not yet in forge)
-# mod 'cron', :git => 'https://github.com/treydock/puppet-cron'
-# mod 'iptables', :git => 'https://github.com/treydock/puppet-iptables'
-# mod 'nfs', :git => 'https://github.com/treydock/puppet-nfs', :ref => '1.x'
-# mod 'omsa', :git => 'https://github.com/treydock/puppet-module-omsa'
+mod 'cron', :git => 'https://github.com/treydock/puppet-cron'
+mod 'iptables', :git => 'https://github.com/treydock/puppet-iptables'
+mod 'nfs', :git => 'https://github.com/treydock/puppet-nfs', :ref => '1.x'
+mod 'omsa', :git => 'https://github.com/treydock/puppet-module-omsa'
 mod 'osg', :git => 'https://github.com/treydock/puppet-osg'
-# mod 'ovirt', :git => 'https://github.com/treydock/puppet-ovirt', :ref => '1.x'
-# mod 'clustershell', :git => 'https://github.com/treydock/puppet-clustershell'
+mod 'ovirt', :git => 'https://github.com/treydock/puppet-ovirt', :ref => '1.x'
+mod 'clustershell', :git => 'https://github.com/treydock/puppet-clustershell'
 
 # mnudelli HEP customized modules..
 mod 'datanode', :git => 'https://github.com/mnudelli/HEP-datanode'
